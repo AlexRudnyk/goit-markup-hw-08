@@ -1,5 +1,4 @@
 .logo {
-  margin-right: 93px;
   font-family: raleway, sans-serif;
   font-weight: 700;
   color: var(--accent-color);
@@ -7,4 +6,12 @@
   font-size: 26px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+
+  @include mq(tablet) {
+    margin-right: 88px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
 }
