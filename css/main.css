@@ -665,8 +665,14 @@ a {
 }
 
 /* Examples block */
-.examples.section {
+.examples {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .examples.section {
+    display: none;
+  }
 }
 
 .examples__title {

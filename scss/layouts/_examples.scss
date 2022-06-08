@@ -2,8 +2,12 @@
 
 .examples {
   &.section {
-    padding-top: 0;
+    @include mq(not-desktop) {
+      display: none;
+    }
   }
+
+  padding-top: 0;
 
   &__title {
     margin-bottom: 50px;
