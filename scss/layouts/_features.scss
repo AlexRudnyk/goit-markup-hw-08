@@ -1,13 +1,36 @@
 /* Features block */
 
 .features__list {
-  display: flex;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .features__item {
-    width: 270px;
+    @include mq(mobile-only) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include mq(tablet-only) {
+      width: calc((100% - 30px) / 2);
+
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include mq(desktop) {
+      width: calc((100% - 3 * 30px) / 4);
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 }
