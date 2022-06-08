@@ -1,0 +1,38 @@
+/* Features block */
+
+.features__list {
+  display: flex;
+
+  .features__item {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: var(--primary-font-weight);
+    line-height: 1.17;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: var(--text-color);
+    line-height: 1.71;
+    font-size: 14px;
+  }
+}
