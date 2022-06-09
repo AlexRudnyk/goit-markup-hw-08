@@ -83,6 +83,10 @@
     padding-top: 8px;
     padding-bottom: 8px;
     color: #757575;
+
+    @include mq(not-desktop) {
+      font-size: 12px;
+    }
   }
 
   &.contact:hover,
@@ -98,4 +102,18 @@
 .navigation__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.navigation__icon.envelope {
+  @include mq(not-desktop) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.navigation__icon.smartphone {
+  @include mq(not-desktop) {
+    width: 10px;
+    height: 14px;
+  }
 }

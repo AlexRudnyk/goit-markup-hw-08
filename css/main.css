@@ -98,7 +98,7 @@ a {
   font-weight: 700;
   color: var(--accent-color);
   text-decoration: none;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
@@ -111,6 +111,8 @@ a {
 
 @media screen and (min-width: 1200px) {
   .logo {
+    font-size: 26px;
+    line-height: 1.19;
     margin-right: 93px;
   }
 }
@@ -234,6 +236,12 @@ a {
   color: #757575;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .navigation__link.contact {
+    font-size: 12px;
+  }
+}
+
 .navigation__link.contact:hover, .navigation__link.contact:focus {
   color: var(--accent-color);
 }
@@ -245,6 +253,20 @@ a {
 .navigation__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .navigation__icon.envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .navigation__icon.smartphone {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .btn {
@@ -1216,6 +1238,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  width: 100%;
   padding: 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1256,10 +1279,10 @@ a {
   color: #ffffff;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .footer-form__mail {
-    display: block;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
   }
 }
 
