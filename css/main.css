@@ -103,6 +103,13 @@ a {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
@@ -140,7 +147,7 @@ a {
 }
 
 @media screen and (max-width: 767.98px) {
-  .navigation__list {
+  .navigation__list.nav-menu {
     display: none;
   }
 }
@@ -589,8 +596,30 @@ a {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .navigation__list.filters {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .filters__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 399px) {
+  .filters__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filters__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
 }
 
 .btn-portfolio {
@@ -1316,21 +1345,49 @@ a {
 }
 
 .navigation__list.gallery {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
 }
 
-.gallery__item {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .navigation__list.gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.gallery__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.gallery__item:nth-child(3n + 3) {
-  margin-right: 0;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .gallery__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .gallery__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .gallery__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 
-.gallery__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .gallery__item:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+  .gallery__item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__link {
@@ -1388,6 +1445,12 @@ a {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .gallery__description--long {
+    padding-bottom: 56px;
+  }
 }
 
 .gallery__title {

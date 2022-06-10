@@ -7,6 +7,11 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   @include mq(tablet) {
     margin-right: 88px;
   }

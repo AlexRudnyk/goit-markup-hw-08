@@ -9,8 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  @include mq(mobile-only) {
+.navigation__list.nav-menu {
+    @include mq(mobile-only) {
     display: none;
   }
 }
