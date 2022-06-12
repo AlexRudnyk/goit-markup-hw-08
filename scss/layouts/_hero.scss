@@ -3,24 +3,39 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
+  max-width: 1600px;
   padding-top: 118px;
   padding-bottom: 118px;
-  // max-width: 480px;
-  max-width: 1600px;
-  // min-height: 400px;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero/hero.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-img_sm.png);
+
+  @include mq(retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-img_sm@2x.png);
+  }
 
   @include mq(tablet) {
-    max-width: 800px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-img_md.png);
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-img_md@2x.png);
+    }
   }
 
   @include mq(desktop) {
-    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-img_lg.png);
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-img_lg@2x.png);
+    }
   }
 
   &__container {
@@ -45,8 +60,8 @@
     text-transform: uppercase;
 
     @include mq(desktop) {
-    font-size: 44px;
-    line-height: 1.36;
+      font-size: 44px;
+      line-height: 1.36;
     }
   }
 }
