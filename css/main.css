@@ -1578,6 +1578,7 @@ a {
   .gallery__item {
     margin-right: 30px;
     margin-bottom: 30px;
+    width: calc((100% - 2 * 30px) / 3);
   }
   .gallery__item:nth-child(3n + 3) {
     margin-right: 0;
