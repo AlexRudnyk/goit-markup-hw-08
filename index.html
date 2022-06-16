@@ -266,30 +266,66 @@
           <h2 class="examples__title">Чем мы занимаемся</h2>
           <ul class="examples__list">
             <li class="examples__item">
-              <img
-                class="examples__img"
-                src="./images/job-samples/box-1.jpg"
-                alt="печатает на компьютере"
-                width="370"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/job-samples/job-1_lg.jpg    1x,
+                    ./images/job-samples/job-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="examples__img"
+                  src="./images/job-samples/job-1_lg.jpg"
+                  alt="печатает на компьютере"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <p class="examples__item-text">Десктопные приложения</p>
             </li>
             <li class="examples__item">
-              <img
-                class="examples__img"
-                src="./images/job-samples/box-2.jpg"
-                alt="смотрит в телефон"
-                width="370"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/job-samples/job-2_lg.jpg    1x,
+                    ./images/job-samples/job-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="examples__img"
+                  src="./images/job-samples/job-2_lg.jpg"
+                  alt="печатает на компьютере"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <p class="examples__item-text">Мобильные приложения</p>
             </li>
             <li class="examples__item">
-              <img
-                class="examples__img"
-                src="./images/job-samples/box-3.jpg"
-                alt="смотрит в планшет"
-                width="370"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/job-samples/job-3_lg.jpg    1x,
+                    ./images/job-samples/job-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="examples__img"
+                  src="./images/job-samples/job-3_lg.jpg"
+                  alt="печатает на компьютере"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <p class="examples__item-text">Дизайнерские решения</p>
             </li>
           </ul>
