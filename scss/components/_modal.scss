@@ -34,12 +34,12 @@
   border-radius: 4px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-@include mq(tablet) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  @include mq(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   @include mq(not-desktop) {
     max-width: 450px;
@@ -201,6 +201,7 @@
   font-size: 12px;
   line-height: 1.17;
   color: var(--text-color);
+  white-space: nowrap;
 
   @include mq(desktop) {
     font-size: 14px;
